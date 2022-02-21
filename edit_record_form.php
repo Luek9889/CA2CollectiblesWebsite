@@ -37,6 +37,10 @@ include('includes/header.php');
             <input type="input" name="price"
                    value="<?php echo $records['price']; ?>">
             <br>
+            <label>Year:</label>
+            <input type="input" name="year_released"
+                   value="<?php echo $records['year_released']; ?>">
+            <br>
 
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
