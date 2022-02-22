@@ -1,10 +1,10 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=wiki';
-    $username = 'root';
-    //$password = '1234';
+    $username = 'LukeP';
+    $password = '12345';
 
     try {
-        $db = new PDO($dsn, $username);
+        $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
         include('database_error.php');
