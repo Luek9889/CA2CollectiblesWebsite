@@ -96,7 +96,7 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php"><button href="index.php" type="button" class="btn btn-dark">Add Record</button></a></p>
+<p><a href="add_record_form.php">Add Record</a></p>
 <p><a href="category_list.php">Manage Categories</a></p>
 </section>
 <?php

@@ -95,30 +95,35 @@ td, th {
   clear: both;
 }
 
+/* # Links # */
+a {
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #d08504;
+}
+
 .sect1 {
   margin-left: 100px;
 }
 
 aside {
+  float: left;
+  width: 150px;
   padding-right: .25em;
 }
 
-aside {
-  float: left;
-  width: 150px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-nav ul li {
-  padding-bottom: 0.5em;
-}
-
+/* nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right:0;
+    li {
+        padding-bottom: 0.5em;
+    }
+} */
 section {
   float: left;
   padding-bottom: 1.5em;
@@ -132,15 +137,6 @@ ul {
 li {
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: black;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #d08504;
 }
 
 form {
