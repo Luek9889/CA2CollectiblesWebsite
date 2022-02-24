@@ -27,26 +27,30 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" id="name" name="name" size=12  onBlur="name_validation();"/><span id="name_err"></span></li>
             <br>
 
             <label>Year Released:</label>
-            <input type="input" name="year">
+            <input type="input" name="year" required>
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price">
+            <input type="input" name="price" required>
             <br>        
             
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input type="file" name="image" accept="image/*" required />
             <br>
             
             <label>&nbsp;</label>
             <input type="submit" value="Add Record">
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+        <a href="index.php"><button href="index.php" type="button" class="btn btn-dark">Cancel</button></a>
+        
     <?php
-include('includes/footer.php');
+//include('includes/footer.php');
 ?>
+</body>
+<script src="validation.js"></script>
+</html>

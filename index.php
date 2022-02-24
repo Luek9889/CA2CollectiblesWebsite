@@ -46,7 +46,7 @@ include('includes/header.php');
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
+<h2 id="cat">Categories</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -59,7 +59,7 @@ include('includes/header.php');
 </nav>          
 </aside>
 
-<section>
+<section class="sect1">
 <!-- display a table of records -->
 <h2><?php echo $category_name; ?></h2>
 <table>
