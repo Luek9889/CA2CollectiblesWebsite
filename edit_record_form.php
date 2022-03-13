@@ -29,32 +29,35 @@ include('includes/header.php');
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $records['name']; ?>">
+            <input type="input" id="name" onBlur="name_validation();" name="name"
+                   value="<?php echo $records['name']; ?>"><span id="name_err">
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price"
-                   value="<?php echo $records['price']; ?>">
+            <input type="input" id="price" onBlur="price_validation();" name="price"
+                   value="<?php echo $records['price']; ?>"><span id="price_err">
             <br>
             <label>Year:</label>
-            <input type="input" name="year_released"
-                   value="<?php echo $records['year_released']; ?>">
+            <input type="input" id="year" onBlur="year_validation();" name="year_released"
+                   value="<?php echo $records['year_released']; ?>"><span id="year_err">
             <br>
 
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>            
-            <?php if ($records['image'] != "") { ?>
+            <?php if ($records['image'] != "") { ?><br>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="300" /></p>
             <?php } ?>
             
             <label>&nbsp;</label>
             <input type="submit" class="btn btn-success" value="Save Changes" >
-            
+             <br> 
             <br>
         </form>
         <p><a href="index.php"><button href="index.php" type="button" class="btn btn-dark">View Homepage</button></a></p>
     <?php
-include('includes/footer.php');
+//include('includes/footer.php');
 ?>
+</body>
+<script src="validation.js"></script>
+</html>
