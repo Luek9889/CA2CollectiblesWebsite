@@ -23,7 +23,7 @@ include('includes/header.php');
             <input type="hidden" name="record_id"
                    value="<?php echo $records['recordID']; ?>">
 
-            <label>Category ID:</label>
+            <label title="1 = Pokemon, 2 = YuGiOh, 3 = MTG, 5 = Pokemon(Japanese)">Category ID:</label>
             <input type="category_id" name="category_id"
                    value="<?php echo $records['categoryID']; ?>">
             <br>
