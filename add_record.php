@@ -63,14 +63,14 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
 
     // Add the product to the database 
-    $query = "INSERT INTO records
-                 (categoryID, name, price, image, year)
+    $query = "INSERT INTO cards
+                 (categoryID, name, price, image, year_released)
               VALUES
-                 (:category_id, :name, :price, :image, :year)";
+                 (:category_id, :name, :price, :image, :year_released)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
-    $statement->bindValue(':year', $year);
+    $statement->bindValue(':year_released', $year);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':image', $image);
     $statement->execute();

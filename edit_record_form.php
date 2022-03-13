@@ -3,7 +3,7 @@ require('database.php');
 
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $query = 'SELECT *
-          FROM records
+          FROM cards
           WHERE recordID = :record_id';
 $statement = $db->prepare($query);
 $statement->bindValue(':record_id', $record_id);
@@ -46,14 +46,15 @@ include('includes/header.php');
             <input type="file" name="image" accept="image/*" />
             <br>            
             <?php if ($records['image'] != "") { ?>
-            <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
+            <p><img src="image_uploads/<?php echo $records['image']; ?>" height="300" /></p>
             <?php } ?>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Save Changes">
+            <input type="submit" class="btn btn-success" value="Save Changes" >
+            
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
+        <p><a href="index.php"><button href="index.php" type="button" class="btn btn-dark">View Homepage</button></a></p>
     <?php
 include('includes/footer.php');
 ?>

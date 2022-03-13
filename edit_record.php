@@ -49,7 +49,7 @@ $image = $original_image; // old image from database
 // If valid, update the record in the database
 require_once('database.php');
 
-$query = 'UPDATE records
+$query = 'UPDATE cards
 SET categoryID = :category_id,
 name = :name,
 price = :price,

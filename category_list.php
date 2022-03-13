@@ -28,7 +28,7 @@ include('includes/header.php');
                       id="delete_product_form">
                     <input type="hidden" name="category_id"
                            value="<?php echo $category['categoryID']; ?>">
-                    <input type="submit" value="Delete">
+                    <input type="submit" value="Delete" class="btn btn-danger">
                 </form>
             </td>
         </tr>
@@ -42,10 +42,10 @@ include('includes/header.php');
 
         <label>Name:</label>
         <input type="input" name="name">
-        <input id="add_category_button" type="submit" value="Add">
+        <input id="add_category_button" type="submit" value="Add" class="btn btn-success">
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
+    <p><a href="index.php"><button href="index.php" type="button" class="btn btn-dark">Homepage</button></a></p>
 
     <?php
 include('includes/footer.php');
