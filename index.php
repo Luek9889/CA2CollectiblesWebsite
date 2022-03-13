@@ -42,6 +42,12 @@ $statement3->closeCursor();
 <?php
 include('includes/header.php');
 ?>
+<?php 
+$category_mtg = "MTG";
+$category_pokemon = "Pokemon";
+$category_pokemonJ = "Pokemon(Japanese)";
+$category_yugi = "YuGiOh";
+?>
 
 
 
@@ -59,9 +65,9 @@ include('includes/header.php');
 </tr>
 <?php foreach ($records as $record) : ?>
 <tr>
-    <?php if( $category_name == "MTG") : ?>
+    <?php if( $category_name == $category_mtg) : ?>
         <td><img src="image_uploads/<?php echo $record['image']; ?>" width="300px" height="300px" /></td>
-    <?php elseif($category_name == "Pokemon" || $category_name == "Pokemon(Japanese)" ):?> 
+    <?php elseif($category_name == $category_pokemon || $category_name == $category_pokemonJ ):?> 
         <td><img src="image_uploads/<?php echo $record['image']; ?>" width="200px" height="300px" /></td>
     <?php else:?> 
         <td><img src="image_uploads/<?php echo $record['image']; ?>" width="300px" height="200px" /></td>
