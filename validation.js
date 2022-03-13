@@ -5,7 +5,7 @@
     var name_name = document.getElementById("name");
     var name_value = document.getElementById("name").value;
     var name_length = name_value.length;
-    var letters = /^[0-9a-zA-Z]+$/;
+    var letters = /^[0-9a-zA-Z ]+$/;
     if(name_length < 4 || !name_value.match(letters))
     {
     document.getElementById('name_err').innerHTML = 'Name must be atleast 4 chracters long and alphanuric chracters only.';
