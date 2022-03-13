@@ -53,15 +53,15 @@ $statement->closeCursor();
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" id="name" name="name" size=12  onBlur="name_validation();"/><span id="name_err"></span></li>
+            <input type="input" id="name" name="name" size=12  onBlur="name_validation();" required/><span id="name_err"></span>
             <br>
 
             <label>Year Released:</label>
-            <input type="input" name="year" required>
+            <input type="input" id="year" name="year" size=4 onBlur="year_validation();" required/><span id="year_err"></span>
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price" required>
+            <input type="input" id= "price" name="price" onBlur="price_validation();" required/><span id="price_err"></span>
             <br>        
             
             <label>Image:</label>

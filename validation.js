@@ -13,49 +13,51 @@
     }
     else
     {
-    document.getElementById('name_err').innerHTML = 'Valid username';
+    document.getElementById('name_err').innerHTML = 'Valid name';
     document.getElementById('name_err').style.color = "#00AF33";
     }
     }
     //user name validation ends
-    //country validation starts
-    function country_validation(){
+    //year validation starts
+    function year_validation(){
     'use strict';
-    var country_name = document.getElementById("country");
-    var country_value = document.getElementById("country").value;
-    if(country_value === "Default" || country_value === "--")
+    var numbers = /^([0-9]{4})+$/;
+    var year_name = document.getElementById("year");
+    var year_value = document.getElementById("year").value;
+    var year_length = year_value.length;
+    if(!year_value.match(numbers) || year_length !== 4 || year_value < 1990 || year_value > 2022)
     {
-    document.getElementById('country_err').innerHTML = 'You must select a country';
-    country_name.focus();
-    document.getElementById('country_err').style.color = "#FF0000";
+    document.getElementById('year_err').innerHTML = 'You must enter a valid year, which must be numeric and must be 4 chracters long.';
+    year_name.focus();
+    document.getElementById('year_err').style.color = "#FF0000";
     }
     else
     {
-    document.getElementById('country_err').innerHTML = 'Country selected.';
-    document.getElementById('country_err').style.color = "#00AF33";
+    document.getElementById('year_err').innerHTML = 'valid year';
+    document.getElementById('year_err').style.color = "#00AF33";
     }
     }
-    //country validation ends
-    //zip validation starts
-    function zip_validation(){
-    'use strict';
-    var numbers = /^[0-9]+$/;
-    var zip_name = document.getElementById("zip");
-    var zip_value = document.getElementById("zip").value;
-    var zip_length = zip_value.length;
-    if(!zip_value.match(numbers) || zip_length !== 5)
-    {
-    document.getElementById('zip_err').innerHTML = 'You must enter a ZIP code, which must be numeric and must be at least 5 chracters long.';
-    zip_name.focus();
-    document.getElementById('zip_err').style.color = "#FF0000";
-    }
-    else
-    {
-    document.getElementById('zip_err').innerHTML = 'ZIP code entered';
-    document.getElementById('zip_err').style.color = "#00AF33";
-    }
-    }
-    //zip validation ends
+    //year validation ends
+    //price validation starts
+    function price_validation(){
+        'use strict';
+        var numbers = /^[0-9]+$/;
+        var price_name = document.getElementById("price");
+        var price_value = document.getElementById("price").value;
+        var price_length = price_value.length;
+        if(price_value < 1 )
+        {
+        document.getElementById('price_err').innerHTML = 'You must enter a valid price, which must be a positive number.';
+        price_name.focus();
+        document.getElementById('price_err').style.color = "#FF0000";
+        }
+        else
+        {
+        document.getElementById('year_err').innerHTML = 'valid price';
+        document.getElementById('year_err').style.color = "#00AF33";
+        }
+        }
+        //price validation ends
     //email validation starts
     function email_validation(){
     'use strict';
