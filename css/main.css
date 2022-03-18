@@ -32,7 +32,6 @@ header h1 {
 footer {
   clear: both;
   margin-top: 1em;
-  border-top: 2px solid black;
 }
 
 footer p {
@@ -46,22 +45,22 @@ body {
   background-color: #cfc8c8;
 }
 
-#container {
+container {
   /* margin-top: 0; */
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;
   background-color: #f8f9fa;
-  border: 1px solid black;
+  border: 1px dashed #8b8686;
   padding: .5em 2em;
 }
 
 table {
-  border: 1px solid black;
+  border: 2px double black;
   border-collapse: collapse;
 }
 
 td, th {
-  border: 1px dashed black;
+  border: 1px dotted black;
   padding: .2em .5em .2em .5em;
   vertical-align: top;
   text-align: left;
